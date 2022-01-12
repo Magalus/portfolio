@@ -44,9 +44,8 @@ export default {
 <style lang="scss" scoped>
 
 .darkModePortfolio {
-    color: white !important;
+    color: #ddd !important;
     background-color: #1D1B19 !important;
-    border-top: 1px solid rgba(255,255,255,.2) !important;
 }
 
 .portfolio {
@@ -58,11 +57,12 @@ export default {
     min-height: 100vh;
     color: black;
     background-color: #F3F3F3;
-    padding-left: 20%;
-    border-top: 1px solid rgba(0,0,0,.2);
+    padding-left: 300px;
 
     h2 {
-        font-size: 35px;
+        font-size: 33px;
+        font-weight: 400;
+        letter-spacing: 1px;
         margin-bottom: 50px;
     }
 

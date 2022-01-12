@@ -2,9 +2,12 @@
     <div id="contact" class="contact" :class="{darkModeContact : this.darkMode}">
         <h2>Contact</h2>
         <form @submit.prevent="onSubmit()">
-            <input type="text" v-model="this.form.name" placeholder="Nom*" ref="mail" required>
-            <input type="email" v-model="this.form.mail" placeholder="Mail*" required>
-            <textarea placeholder="Message...*" v-model="this.form.message" rows="3" required></textarea>
+            <div class="firstLine">
+                <input type="text" v-model="this.form.name" placeholder="Nom *" ref="mail" required>
+                <input type="text" v-model="this.form.number" placeholder="Numéro" required>
+            </div>
+            <input type="email" v-model="this.form.mail" placeholder="Mail *" required>
+            <textarea placeholder="Message... *" v-model="this.form.message" rows="4" required></textarea>
             <button type="submit">Envoyer</button>
         </form>
     </div>
@@ -20,6 +23,7 @@ export default {
         return {
             form: {
                 name: "",
+                number: "",
                 mail: "",
                 message: ""
             }
@@ -43,9 +47,8 @@ export default {
 <style lang="scss" scoped>
 
 .darkModeContact {
-    color: white !important;
+    color: #ddd !important;
     background-color: #1D1B19 !important;
-    border-top: 1px solid rgba(255,255,255,.2) !important;
 }
 
 .contact {
@@ -57,51 +60,92 @@ export default {
     min-height: 100vh;
     color: black;
     background-color: #F3F3F3;
-    padding-left: 20%;
-    border-top: 1px solid rgba(0,0,0,.2);
+    padding-left: 300px;
 
     h2 {
-        margin-bottom: 20px;
-        font-size: 30px;
+        font-size: 33px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        margin-bottom: 40px;
+        max-width: 700px;
+        width: 80%;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            height: 2px;
+            background-color: rgba(255,255,255,.2);
+            width: 200px;
+            left: 0;
+        }
     }
 
     form {
         display: flex;
         flex-direction: column;
-        width: 500px;
+        max-width: 700px;
+        width: 80%;
+
+        .firstLine {
+            display: flex;
+            justify-content: space-between;
+
+            input {
+                width: 48%;
+            }
+        }
 
         input {
-            margin: 10px 0px;
-            padding: 5px;
+            color: #ddd;
+            background-color: #343A40;
+            border: none;
+            margin: 13px 0px;
+            padding: 5px 5px 5px 20px;
+            font-size: 20px;
+            height: 50px;
 
             &:focus {
                 outline: none;
             }
 
             &::placeholder {
-                font-size: 17px;
+                color: #AAB1B8;
             }
         }
 
         textarea {
-            margin: 10px 0px;
-            padding: 5px;
+            color: #ddd;
+            background-color: #343A40;
+            border: none;
+            margin: 12px 0px;
+            padding: 5px 5px 5px 20px;
+            font-size: 20px;
 
             &:focus {
                 outline: none;
             }
 
             &::placeholder {
-                font-size: 17px;
+                color: #AAB1B8
             }
         }
 
         button {
-            margin: 10px 0px;
-            font-size: 17px;
+            background-color: #987750;
+            color: #ddd;
+            border: none;
+            margin: 10px auto;
+            border-radius: 20px;
+            font-size: 20px;
+            height: 40px;
+            width: 140px;
+            transition: all ease 0.35s;
 
             &:hover {
                 cursor: pointer;
+                background-color: #6C5538;
             }
         }
     }

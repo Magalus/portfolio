@@ -3,7 +3,7 @@
         <div class="presentationContainer">
             <div class="presentation">
                 <h2>INTRODUCTION</h2>
-                <h1>DEVELOPPEUR WEB</h1>
+                <h1>DÉVELOPPEUR WEB</h1>
                 <span>
                     Je suis blabla blabla blabla à Bordeaux, 
                     spécialisé dans le VueJS, NuxtJS et Laravel 
@@ -29,7 +29,7 @@ export default {
 <style lang="scss" scoped>
 
 .darkModeHome {
-    color: white !important;
+    color: #ddd !important;
     background-color: #1D1B19 !important;
 }
 
@@ -40,7 +40,7 @@ export default {
     width: 100%;
     min-height: 100vh;
     background-color: #F3F3F3;
-    padding-left: 20%;
+    padding-left: 300px;
 
     .presentationContainer {
         display: flex;
@@ -56,11 +56,22 @@ export default {
             h1 {
               font-size: 48px;
               font-weight: 400;
-              margin: 20px 0px;
+              margin: 30px 0px 40px 0px;
+              position: relative;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: -5px;
+                    height: 2px;
+                    background-color: rgba(255,255,255,.2);
+                    width: 150px;
+                    left: 0;
+                }
             }
 
             h2 {
-              font-size: 18px;
+              font-size: 21px;
               font-weight: 500;
               letter-spacing: 1px;
               color: #987750;

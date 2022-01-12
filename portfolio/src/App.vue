@@ -8,10 +8,9 @@
             </div>
         </div>
         <Navbar :darkMode="this.darkMode"/>
-        <router-view :darkMode="this.darkMode"/>
-        <router-view name="experience" :darkMode="this.darkMode"/>
-        <router-view name="portfolio" :darkMode="this.darkMode"/>
-        <router-view name="contact" :darkMode="this.darkMode"/>
+        <transition name="fade">
+            <router-view :darkMode="this.darkMode"/>
+        </transition>
     </div>
 </template>
 
@@ -46,11 +45,11 @@ export default {
     min-height: 100vh;
 
     .darkModeContent {
-        background-color: #111111 !important;
+        background-color: #1D1B19 !important;
     }
 
     .content {
-        background-color: white;
+        background-color: #ddd;
     }
 
     .colorMode {
@@ -90,14 +89,14 @@ export default {
     }
 }
 
-// .fade-enter-active,
-// .fade-leave-active {
-//   transition: opacity 1s ease;
-// }
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 1.2s ease;
+}
 
-// .fade-enter-from,
-// .fade-leave-to {
-//   opacity: 0;
-// }
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
 
 </style>

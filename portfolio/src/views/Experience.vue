@@ -45,9 +45,8 @@ export default {
 <style lang="scss" scoped>
 
 .darkModeFormation {
-    color: white !important;
+    color: #ddd !important;
     background-color: #1D1B19 !important;
-    border-top: 1px solid rgba(255,255,255,.2) !important;
 }
 
 .formation {
@@ -58,8 +57,7 @@ export default {
     min-height: 100vh;
     color: black;
     background-color: #F3F3F3;
-    padding-left: 20%;
-    border-top: 1px solid rgba(0,0,0,.2);
+    padding-left: 300px;
 
     .experienceLinks {
         margin-top: 60px;
@@ -69,7 +67,7 @@ export default {
             font-size: 32px;
             font-weight: 300;
             letter-spacing: 1px;
-            color: white;
+            color: #ddd;
 
             &:hover {
                 cursor: pointer;
@@ -99,16 +97,18 @@ export default {
             color: #987750;
         }
     }
+
+    .fade-enter-active,
+    .fade-leave-active {
+    transition: opacity 0.3s ease;
+    }
+
+    .fade-enter-from,
+    .fade-leave-to {
+    opacity: 0;
+    }
 }
 
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.3s ease;
-}
 
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
 
 </style>

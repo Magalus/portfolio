@@ -32,8 +32,8 @@
         background-color: #181715;
         max-width: 900px;
         width: 80%;
-        height: 200px;
-        padding: 0px 30px;
+        min-height: 200px;
+        padding: 15px 30px;
         margin: 10px 0px;
         display: flex;
         flex-direction: column;
@@ -47,6 +47,7 @@
         .study {
             font-size: 25px;
             font-weight: 400;
+            margin: 10px 0px;
         }
 
         .resume {

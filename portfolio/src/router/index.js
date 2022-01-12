@@ -8,13 +8,23 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    components: {
-      default: Home,
-      experience: Experience,
-      portfolio: Portfolio,
-      contact: Contact,
-    }
+    component: Home
   },
+  {
+    path: '/experience',
+    name: 'Experience',
+    component: Experience
+  },
+  {
+    path: '/portfolio',
+    name: 'Portfolio',
+    component: Portfolio
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: Contact
+  }
 ]
 
 const router = createRouter({
