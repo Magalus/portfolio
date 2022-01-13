@@ -1,5 +1,5 @@
 <template>
-    <div id="portfolio" class="portfolio" :class="{darkModePortfolio : this.darkMode}">
+    <div id="portfolio" class="portfolio">
         <h2>Portfolio</h2>
         <div class="projects">
             <div class="project">
@@ -31,22 +31,7 @@
     </div>
 </template>
 
-<script>
-
-export default {
-    props: {
-        darkMode: Boolean,
-    }
-}
-
-</script>
-
 <style lang="scss" scoped>
-
-.darkModePortfolio {
-    color: #ddd !important;
-    background-color: #1D1B19 !important;
-}
 
 .portfolio {
     display: flex;
@@ -55,8 +40,8 @@ export default {
     align-items: center;
     width: 100%;
     min-height: 100vh;
-    color: black;
-    background-color: #F3F3F3;
+    color: #ddd;
+    background-color: #1D1B19;
     padding-left: 300px;
 
     h2 {

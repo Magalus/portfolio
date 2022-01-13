@@ -1,9 +1,15 @@
 <template>
-    <div id="home" class="home" :class="{darkModeHome : this.darkMode}">
+    <div id="home" class="home">
         <div class="presentationContainer">
             <div class="presentation">
                 <h2>INTRODUCTION</h2>
-                <h1>DÉVELOPPEUR WEB</h1>
+                <vue-writer 
+                    class="title" 
+                    :array="['MAEL VIDAMENT', 'DÉVELOPPEUR WEB', 'FREELANCE']" 
+                    :start="500"
+                    :eraseSpeed="50" 
+                    :typeSpeed="100"
+                />
                 <span>
                     Je suis blabla blabla blabla à Bordeaux, 
                     spécialisé dans le VueJS, NuxtJS et Laravel 
@@ -17,29 +23,23 @@
 
 <script>
 
+import VueWriter from 'vue-writer'
+
 export default {
-    props: {
-        darkMode: Boolean,
-    }
+    components: {VueWriter}
 }
 
 </script>
 
-
 <style lang="scss" scoped>
-
-.darkModeHome {
-    color: #ddd !important;
-    background-color: #1D1B19 !important;
-}
 
 .home {
 
     display: flex;
-    color: black;
+    color: #ddd;
     width: 100%;
     min-height: 100vh;
-    background-color: #F3F3F3;
+    background-color: #1D1B19;
     padding-left: 300px;
 
     .presentationContainer {
@@ -51,23 +51,34 @@ export default {
         .presentation {
             display: flex;
             flex-direction: column;
-            width: 50%;
+            width: 80%;
+            max-width: 700px;
 
-            h1 {
-              font-size: 48px;
-              font-weight: 400;
-              margin: 30px 0px 40px 0px;
-              position: relative;
+            .is-typed {
+                font-size: 48px;
+                font-weight: 400;
+                color: white;
+                position: relative;
 
-                &::after {
-                    content: '';
-                    position: absolute;
-                    bottom: -5px;
-                    height: 2px;
-                    background-color: rgba(255,255,255,.2);
-                    width: 150px;
-                    left: 0;
+                span {
+                    background-color: red !important;
                 }
+
+                &::after{
+                    content: "";
+                    position: absolute;
+                    background-color: #987750;
+                    height: 100%;
+                    border-left: 1px solid white;
+                    margin-left: -5px;
+                }
+            }
+
+            .is-typed span.cursor {
+                display: inline-block;
+                width: 3px;
+                background-color: white;
+                animation: blink 1s infinite;
             }
 
             h2 {
@@ -75,12 +86,14 @@ export default {
               font-weight: 500;
               letter-spacing: 1px;
               color: #987750;
+              margin-bottom: 40px;
             }
 
             span {
                 font-size: 30px;
                 color: #888;
                 text-align: justify;
+                margin-top: 15px;
             }
         }
     }

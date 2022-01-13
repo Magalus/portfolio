@@ -1,5 +1,5 @@
 <template>
-    <div id="formation" class="formation" :class="{darkModeFormation : this.darkMode}">
+    <div id="formation" class="formation">
         <div class="experienceLinks">
             <span class="experienceLink" :class="{isClick : this.view == 'Professional'}" @click="this.view = 'Professional'">
                 Expériences
@@ -25,9 +25,6 @@ import Formation from '@/components/experience/Formation.vue'
 import Skill from '@/components/experience/Skill.vue'
 
 export default {
-    props: {
-        darkMode: Boolean,
-    },
     components: {
       Professional,
       Formation,
@@ -44,19 +41,14 @@ export default {
 
 <style lang="scss" scoped>
 
-.darkModeFormation {
-    color: #ddd !important;
-    background-color: #1D1B19 !important;
-}
-
 .formation {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     min-height: 100vh;
-    color: black;
-    background-color: #F3F3F3;
+    color: #ddd;
+    background-color: #1D1B19;
     padding-left: 300px;
 
     .experienceLinks {

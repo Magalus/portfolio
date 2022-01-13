@@ -1,5 +1,5 @@
 <template>
-    <div id="contact" class="contact" :class="{darkModeContact : this.darkMode}">
+    <div id="contact" class="contact">
         <h2>Contact</h2>
         <form @submit.prevent="onSubmit()">
             <div class="firstLine">
@@ -16,9 +16,6 @@
 
 <script>
 export default {
-    props: {
-        darkMode: Boolean,
-    },
     data() {
         return {
             form: {
@@ -46,11 +43,6 @@ export default {
 
 <style lang="scss" scoped>
 
-.darkModeContact {
-    color: #ddd !important;
-    background-color: #1D1B19 !important;
-}
-
 .contact {
     display: flex;
     flex-direction: column;
@@ -58,8 +50,8 @@ export default {
     align-items: center;
     width: 100%;
     min-height: 100vh;
-    color: black;
-    background-color: #F3F3F3;
+    color: #ddd;
+    background-color: #1D1B19;
     padding-left: 300px;
 
     h2 {
@@ -133,10 +125,10 @@ export default {
         }
 
         button {
-            background-color: #987750;
+            background-color: #6C5538;
             color: #ddd;
             border: none;
-            margin: 10px auto;
+            margin: 15px auto;
             border-radius: 20px;
             font-size: 20px;
             height: 40px;
@@ -145,7 +137,7 @@ export default {
 
             &:hover {
                 cursor: pointer;
-                background-color: #6C5538;
+                background-color: #987750;
             }
         }
     }

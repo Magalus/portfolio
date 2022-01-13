@@ -1,7 +1,7 @@
 <template> 
-    <nav class="navbar">
+    <nav class="navbar" >
         <div class="headNavbar">
-            <div class="avatar"></div>
+            <div class="avatar" ></div>
             <h3>Maël Vidament</h3>
         </div>
         <div class="routes">
@@ -49,14 +49,11 @@
 <script>
 
 export default {
-    props: {
-        darkMode: Boolean,
-    },
     data() {
         return {
             isOverLinkedin: false,
             isOverGit: false,
-            isOverCV: false
+            isOverCV: false,
         }
     },
 }
@@ -141,7 +138,7 @@ export default {
         }
 
         .router-link-active {
-            color:  #987750;
+            color:  #987750 !important;
         }
     }
 
