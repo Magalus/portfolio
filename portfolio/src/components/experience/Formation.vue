@@ -21,12 +21,12 @@
 <style lang="scss" scoped>
 
 .Formation {
-    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-top: 70px;
 
     div {
         background-color: #181715;
@@ -42,18 +42,42 @@
         .school {
             font-size: 20px;
             font-weight: 300;
+
+            @media screen and (max-width: 1160px) {
+                font-size: 18px;
+            }
+
+            @media screen and (max-width: 720px) {
+                font-size: 16px;
+            }
         }
 
         .study {
             font-size: 25px;
             font-weight: 400;
             margin: 10px 0px;
+
+            @media screen and (max-width: 1160px) {
+                font-size: 23px;
+            }
+
+            @media screen and (max-width: 720px) {
+                font-size: 21px;
+            }
         }
 
         .resume {
             font-size: 18px;
             font-weight: 400;
             color: #888;
+
+            @media screen and (max-width: 1160px) {
+                font-size: 16px;
+            }
+
+            @media screen and (max-width: 720px) {
+                font-size: 14px;
+            }
         }
     }
 }

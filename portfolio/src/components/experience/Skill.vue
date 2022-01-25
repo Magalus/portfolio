@@ -1,6 +1,6 @@
 <template>
     <div class="Skill">
-        <div>
+        <div class="languages">
             <div class="language">
                 <span>HTML5</span>
                 <span class="percent htmlPercent">95%</span>
@@ -12,7 +12,7 @@
                 <div class="bar cssBar"></div>
             </div>
         </div>
-        <div>
+        <div class="languages">
             <div class="language">
                 <span>Javascript</span>
                 <span class="percent javascriptPercent">70%</span>
@@ -24,7 +24,7 @@
                 <div class="bar vuenuxtBar"></div>
             </div>
         </div>
-        <div>
+        <div class="languages">
              <div class="language">
                 <span>PHP</span>
                 <span class="percent phpPercent">60%</span>
@@ -36,7 +36,7 @@
                 <div class="bar laravelBar"></div>
             </div>
         </div>
-        <div>
+        <div class="languages">
             <div class="language">
                 <span>Python</span>
                 <span class="percent pythonPercent">80%</span>
@@ -54,25 +54,52 @@
 <style lang="scss" scoped>
 
 .Skill {
-    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin: auto;
 
-    div {
+    .languages {
         display: flex;
         justify-content: space-evenly;
         width: 100%;
         margin: 10px 0px;
 
+        @media screen and (max-width: 1350px) {
+            flex-direction: column;
+            align-items: center;
+            margin: 0px;
+        }
+
         .language {
-            width: 45%;
+            width: 40%;
             max-width: 650px;
             display: flex;
             flex-direction: column;
             position: relative;
+            margin: 10px 0px;
+
+            @media screen and (max-width: 1350px) {
+                width: 70%;
+                margin: 20px 0px
+            }
+
+            span {
+                &:first-of-type {
+                    margin-bottom: 10px;
+
+                    @media screen and (max-width: 1350px) {
+                        align-self: flex-start;
+                        font-size: 18px;
+                    }
+
+                    @media screen and (max-width: 720px) {
+                        font-size: 16px;
+                    }
+                }
+            }
 
             .percent {
                 position: absolute;
@@ -85,6 +112,11 @@
                 bottom: 20px;
                 opacity: 0;
                 transform: translateX(-50%);
+
+                @media screen and (max-width: 1350px) {
+                    bottom: 15px;
+                    font-size: 13px;
+                }
             }
 
             @keyframes PercentBarAppear {
@@ -110,7 +142,7 @@
 
             .cssPercent {
                 --percentEnd: 90%;
-                animation: 2s forwards 0s 1 PercentBarAppear;
+                animation: 2s forwards 0.25s 1 PercentBarAppear;
             }
 
             .javascriptPercent {
@@ -120,7 +152,7 @@
 
             .vuenuxtPercent {
                 --percentEnd: 75%;
-                animation: 2s forwards 0.5s 1 PercentBarAppear;
+                animation: 2s forwards 0.75s 1 PercentBarAppear;
             }
 
             .phpPercent {
@@ -130,7 +162,7 @@
 
             .laravelPercent {
                 --percentEnd: 50%;
-                animation: 2s forwards 1s 1 PercentBarAppear;
+                animation: 2s forwards 1.25s 1 PercentBarAppear;
             }
 
             .pythonPercent {
@@ -140,7 +172,7 @@
 
             .scikitPercent {
                 --percentEnd: 75%;
-                animation: 2s forwards 1.5s 1 PercentBarAppear;
+                animation: 2s forwards 1.75s 1 PercentBarAppear;
             }
                             
 
@@ -184,7 +216,7 @@
             .cssBar {
                 &::before {
                     --widthEnd: 90%;
-                    animation: 2s forwards 0s 1 progressBarAppear;
+                    animation: 2s forwards 0.25s 1 progressBarAppear;
                 }
             }
 
@@ -198,7 +230,7 @@
             .vuenuxtBar {
                 &::before {
                     --widthEnd: 75%;
-                    animation: 2s forwards 0.5s 1 progressBarAppear;
+                    animation: 2s forwards 0.75s 1 progressBarAppear;
                 }
             }
 
@@ -212,7 +244,7 @@
             .laravelBar {
                 &::before {
                     --widthEnd: 50%;
-                    animation: 2s forwards 1s 1 progressBarAppear;
+                    animation: 2s forwards 1.25s 1 progressBarAppear;
                 }
             }
 
@@ -226,7 +258,7 @@
             .scikitBar {
                 &::before {
                     --widthEnd: 75%;
-                    animation: 2s forwards 1.5s 1 progressBarAppear;
+                    animation: 2s forwards 1.75s 1 progressBarAppear;
                 }
             }
         }

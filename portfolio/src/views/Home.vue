@@ -42,6 +42,10 @@ export default {
     background-color: #1D1B19;
     padding-left: 300px;
 
+    @media screen and (max-width: 1024px) {
+        padding-left: 0px;
+    }
+
     .presentationContainer {
         display: flex;
         justify-content: center;
@@ -59,6 +63,18 @@ export default {
                 font-weight: 400;
                 color: white;
                 position: relative;
+
+                @media screen and (max-width: 620px) {
+                    font-size: 36px;
+                }
+
+                @media screen and (max-width: 420px) {
+                    font-size: 32px;
+                }
+
+                @media screen and (max-width: 380px) {
+                    font-size: 25px;
+                }
 
                 span {
                     background-color: red !important;
@@ -82,11 +98,23 @@ export default {
             }
 
             h2 {
-              font-size: 21px;
-              font-weight: 500;
-              letter-spacing: 1px;
-              color: #987750;
-              margin-bottom: 40px;
+                font-size: 21px;
+                font-weight: 500;
+                letter-spacing: 1px;
+                color: #987750;
+                margin-bottom: 40px;
+
+                @media screen and (max-width: 620px) {
+                        font-size: 18px;
+                }
+
+                @media screen and (max-width: 420px) {
+                    font-size: 17px;
+                }
+
+                @media screen and (max-width: 380px) {
+                    font-size: 15px;
+                }
             }
 
             span {
@@ -94,6 +122,18 @@ export default {
                 color: #888;
                 text-align: justify;
                 margin-top: 15px;
+
+                @media screen and (max-width: 620px) {
+                        font-size: 24px;
+                }
+
+                @media screen and (max-width: 420px) {
+                    font-size: 22px;
+                }
+
+                @media screen and (max-width: 380px) {
+                    font-size: 18px;
+                }
             }
         }
     }

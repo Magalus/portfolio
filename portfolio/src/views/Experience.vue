@@ -11,10 +11,7 @@
                 Compétences
             </span>
         </div>
-        <transition name="fade" mode="out-in">
-            <component :is="this.view"></component>
-        </transition>
-
+        <component :is="this.view" class="actualView"></component>
     </div>
 </template>
 
@@ -51,8 +48,12 @@ export default {
     background-color: #1D1B19;
     padding-left: 300px;
 
+    @media screen and (max-width: 1024px) {
+        padding-left: 0px;
+    }
+
     .experienceLinks {
-        margin-top: 60px;
+        margin-top: 70px;
 
         .experienceLink {
             position: relative;
@@ -60,6 +61,18 @@ export default {
             font-weight: 300;
             letter-spacing: 1px;
             color: #ddd;
+
+            @media screen and (max-width: 720px) {
+                font-size: 24px;
+            }
+
+            @media screen and (max-width: 590px) {
+                font-size: 20px;
+            }
+
+            @media screen and (max-width: 480px) {
+                    font-size: 16px;
+                }
 
             &:hover {
                 cursor: pointer;
@@ -77,11 +90,38 @@ export default {
                     top: 50%;
                     margin: 0 5px;
                     margin-top: 2px;
+
+                    @media screen and (max-width: 720px) {
+                        width: 30px;
+                        margin-top: 2px;
+                    }
+
+                    @media screen and (max-width: 590px) {
+                        width: 20px;
+                        margin-top: 0px;
+                    }
+
+                    @media screen and (max-width: 480px) {
+                        width: 10px;
+                        margin-top: 0px;
+                    }
                 }
             }
 
             &:nth-child(2), &:nth-child(3) {
                 margin-left: 60px;
+
+                @media screen and (max-width: 720px) {
+                    margin-left: 50px;
+                }
+
+                @media screen and (max-width: 590px) {
+                    margin-left: 40px;
+                }
+
+                @media screen and (max-width: 480px) {
+                    margin-left: 30px;
+                }
             }
         }
 
@@ -90,14 +130,20 @@ export default {
         }
     }
 
-    .fade-enter-active,
-    .fade-leave-active {
-    transition: opacity 0.3s ease;
-    }
+    .actualView {
+        animation: Translate 1s ease;
+        width: 90%;
 
-    .fade-enter-from,
-    .fade-leave-to {
-    opacity: 0;
+        @keyframes Translate {
+            0% {
+                transform: rotateY(20deg) rotateZ(-3deg);
+                opacity: 0;
+            }
+            100% {
+                transform: rotateY(0) rotateZ(0);
+                opacity: 1;
+            }
+        }
     }
 }
 

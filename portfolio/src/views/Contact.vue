@@ -54,6 +54,10 @@ export default {
     background-color: #1D1B19;
     padding-left: 300px;
 
+    @media screen and (max-width: 1024px) {
+        padding-left: 0px;
+    }
+
     h2 {
         font-size: 33px;
         font-weight: 400;

@@ -44,11 +44,15 @@
     background-color: #1D1B19;
     padding-left: 300px;
 
+    @media screen and (max-width: 1024px) {
+        padding-left: 0px;
+    }
+
     h2 {
         font-size: 33px;
         font-weight: 400;
         letter-spacing: 1px;
-        margin-bottom: 50px;
+        margin: 50px 0px;
     }
 
     .projects {
@@ -62,6 +66,16 @@
             width: 400px;
             height: 300px;
             margin: 20px 30px;
+
+            @media screen and (max-width: 550px) {
+                width: 300px;
+                height: 250px;
+            }
+
+            @media screen and (max-width: 400px) {
+                width: 270px;
+                height: 230px;
+            }
 
             .projectImg {
                 width: 100%;
