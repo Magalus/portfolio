@@ -11,10 +11,9 @@
                     :typeSpeed="100"
                 />
                 <span>
-                    Je suis blabla blabla blabla à Bordeaux, 
-                    spécialisé dans le VueJS, NuxtJS et Laravel 
-                    et qui blabla blabla blabla sur des projets 
-                    blabla blabla blabla.
+                    Après plusieurs années d'études et diverses expériences professionnelles dans le développement web et l'intelligence artificielle,
+                    j'ai décidé de me lancer en tant que freelance, spécialisé dans le VueJS, NuxtJS et Laravel.
+                    
                 </span>
             </div>
         </div>
@@ -118,21 +117,25 @@ export default {
             }
 
             span {
-                font-size: 30px;
+                font-size: 25px;
                 color: #888;
                 text-align: justify;
                 margin-top: 15px;
 
+                @media screen and (max-width: 800px) {
+                        font-size: 22px;
+                }
+
                 @media screen and (max-width: 620px) {
-                        font-size: 24px;
+                        font-size: 20px;
                 }
 
                 @media screen and (max-width: 420px) {
-                    font-size: 22px;
+                    font-size: 18px;
                 }
 
                 @media screen and (max-width: 380px) {
-                    font-size: 18px;
+                    font-size: 16px;
                 }
             }
         }

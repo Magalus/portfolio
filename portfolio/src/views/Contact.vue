@@ -3,18 +3,24 @@
         <h2>Contact</h2>
         <form @submit.prevent="onSubmit()">
             <div class="firstLine">
-                <input type="text" v-model="this.form.name" placeholder="Nom *" ref="mail" required>
-                <input type="text" v-model="this.form.number" placeholder="Numéro" required>
+                <input type="text" v-model="this.form.name" placeholder="Nom  *" ref="name" required>
+                <input type="text" v-model="this.form.number" placeholder="Numéro">
             </div>
             <input type="email" v-model="this.form.mail" placeholder="Mail *" required>
+             <input type="text" v-model="this.form.subject" placeholder="Sujet">
             <textarea placeholder="Message... *" v-model="this.form.message" rows="4" required></textarea>
             <button type="submit">Envoyer</button>
+            <div class="success" v-if="this.confirmation == 'success'">Message envoyé</div>
+            <div class="fail" v-if="this.confirmation == 'fail'">Echec de l'envoi</div>
         </form>
     </div>
 </template>
 
 
 <script>
+
+import axios from 'axios';
+
 export default {
     data() {
         return {
@@ -22,20 +28,36 @@ export default {
                 name: "",
                 number: "",
                 mail: "",
+                subject: "",
                 message: ""
-            }
+            },
+            confirmation: '',
         }
     },
     methods: {
         onSubmit() {
-            console.log(this.form)
+            axios
+            .post('mail.php', this.form)
+            .then(response => {
+                this.confirmation = 'success';
+                this.resetForm()
+                return response;
+            })
+            .catch(error => {
+                this.confirmation = 'fail';
+                return error;
+            });
+        },
+        resetForm() {
             this.form.name = ""
+            this.form.number = ""
             this.form.mail = ""
+            this.form.subject = ""
             this.form.message = ""
         }
     },
     mounted() {
-        this.$refs.mail.focus()
+        this.$refs.name.focus()
     }
 }
 </script>
@@ -143,6 +165,24 @@ export default {
                 cursor: pointer;
                 background-color: #987750;
             }
+        }
+
+        .success {
+            margin-top: 15px;
+            margin-bottom: 20px;
+            padding: 10px 0px 10px 15px;
+            background-color:#d4edda;
+            border-color: #c3e6cb;
+            color: #155724;
+        }
+
+        .fail {
+            margin-top: 15px;
+            margin-bottom: 20px;
+            padding: 10px 0px 10px 15px;
+            background-color: #f8d7da;
+            border-color: #f5c6cb;
+            color: #721c24;
         }
     }
 }

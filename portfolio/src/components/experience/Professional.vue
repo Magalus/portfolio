@@ -3,17 +3,17 @@
         <div>
             <span class="company">Thinkdeep AI ( 2020 - 2021 )</span>
             <span class="post">Machine Learning Engineer</span>
-            <span class="resume">Adipisicing Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+            <span class="resume">Développement et amélioration de différents algorithmes de détection de défauts et d'objets (Tensorflow, Scikit-Learn).</span>
         </div>
         <div>
             <span class="company">La Compagnie Fiduciaire ( 2019 - 2020 )</span>
-            <span class="post">Développeur Big Data</span>
-            <span class="resume">Adipisicing Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+            <span class="post">Développeur Web / Big Data</span>
+            <span class="resume">Amélioration et maintenance d'un algorithme de sugestion d'association entre des comptes et des opérations bancaires.</span>
         </div>
         <div>
             <span class="company">Orange ( 2018 - 2019 )</span>
             <span class="post">Développeur Web</span>
-            <span class="resume">Adipisicing Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+            <span class="resume">Développement d'un portail Web en JEE dédié aux experts énergie nationaux.</span>
         </div>
     </div>
 </template>

@@ -3,17 +3,17 @@
         <div>
             <span class="school">Ynov ( 2019 - 2021 )</span>
             <span class="study">Mastère Expert en Intelligence Artificielle</span>
-            <span class="resume">Adipisicing Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+            <span class="resume">Apprentissage des différents concepts de l'intelligence artificielle ( Machine learning, Deep Learning, Reinforcement learning, NLP )</span>
         </div>
         <div>
             <span class="school">IUT Bordeaux ( 2018 - 2019 )</span>
             <span class="study">Licence Professionnelle Développement Web</span>
-            <span class="resume">Adipisicing Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+            <span class="resume">Approfondissement des compétences en développement frontend, backend et mobile ( VueJS, Ruby, Laravel etc. ).</span>
         </div>
         <div>
             <span class="school">Webforce 3 ( 2018 )</span>
             <span class="study">Certificat Professionel Développeur Web</span>
-            <span class="resume">Adipisicing Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+            <span class="resume">Découverte des bases du développement Web à travers différents projets pratiques ( HTML, CSS, Javascript, PHP, Laravel )</span>
         </div>
     </div>
 </template>

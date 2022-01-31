@@ -3,29 +3,40 @@
         <h2>Portfolio</h2>
         <div class="projects">
             <div class="project">
-                <div class="projectImg" :style="{backgroundImage: 'url(' + require('../assets/img/mariage.png') + ')'}"></div>
+                <a href="https://github.com/Magalus/4532joursapres" target="_blank" class="projectImg" :style="{backgroundImage: 'url(' + require('../assets/img/mariage.png') + ')'}"></a>
                 <span>Mariage</span>
                 <span>VueJS</span>
+                
             </div>
             <div class="project">
-                <div class="projectImg" :style="{backgroundImage: 'url(' + require('../assets/img/facebooklite.png') + ')'}"></div>
+                <a href="https://github.com/Magalus/facebook_lite" target="_blank" class="projectImg" :style="{backgroundImage: 'url(' + require('../assets/img/facebooklite.png') + ')'}"></a>
                 <span>Facebook Lite</span>
                 <span>NuxtJS - Laravel</span>
             </div>
             <div class="project">
-                <div class="projectImg" :style="{backgroundImage: 'url(' + require('../assets/img/construction.jpg') + ')'}"></div>
+                <a href="https://maelvidament.ovh/quiz" target="_blank" class="projectImg" :style="{backgroundImage: 'url(' + require('../assets/img/quiz.png') + ')'}"></a>
                 <span>Quiz</span>
                 <span>VueJS</span>
             </div>
             <div class="project">
-                <div class="projectImg" :style="{backgroundImage: 'url(' + require('../assets/img/construction.jpg') + ')'}"></div>
+                <a href="https://maelvidament.ovh/meteo" target="_blank" class="projectImg" :style="{backgroundImage: 'url(' + require('../assets/img/weather.png') + ')'}"></a>
                 <span>Météo</span>
                 <span>VueJS</span>
             </div>
             <div class="project">
-                <div class="projectImg" :style="{backgroundImage: 'url(' + require('../assets/img/detectiondechet.png') + ')'}"></div>
-                <span>Détection de déchet</span>
-                <span>Python - Tenserflow</span>
+                <a href="https://maelvidament.ovh/de" target="_blank" class="projectImg" :style="{backgroundImage: 'url(' + require('../assets/img/dice.png') + ')'}"></a>
+                <span>Jeu de dés</span>
+                <span>VueJS</span>
+            </div>
+            <div class="project">
+                <a href="https://maelvidament.ovh/memoire" target="_blank" class="projectImg" :style="{backgroundImage: 'url(' + require('../assets/img/memory.png') + ')'}"></a>
+                <span>Jeu des paires</span>
+                <span>VueJS</span>
+            </div>
+            <div class="project">
+                <a href="https://maelvidament.ovh/todo" target="_blank" class="projectImg" :style="{backgroundImage: 'url(' + require('../assets/img/todolist.png') + ')'}"></a>
+                <span>To-do list</span>
+                <span>VueJS</span>
             </div>
         </div>
     </div>
@@ -83,9 +94,11 @@
                 border: 1px solid #C9C9C9;
                 background-size: cover;
                 background-position: center;
+                transition: transform .3s ease-in-out;
 
                 &:hover {
                     cursor: pointer;
+                    transform: scale(0.95);
                 }
             }
 
